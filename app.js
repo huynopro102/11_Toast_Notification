@@ -13,7 +13,6 @@ btnsuccess.onclick = function(){
 btnwarning.onclick = function(){
     creattoast('warningg')
 }
-creattoast('successs')
 // hàm tạo 1 element khi onclick vào tagname
 function creattoast(color){
     var chagneicon =  "fa-solid fa-circle-exclamation"
