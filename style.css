@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --success:green;
+    --warning:orange;
+    --error:red;
+
+    --success-light:rgba(0, 128, 0 , 0.5);
+    --warning-light:rgba(255, 165, 0 , 0.5);
+    --error-light:rgba(255, 0, 0 , 0.5);
+}
+body{
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:sans-serif;
+}
+.control button{
+    color:#fff;
+    border-radius:5px;
+    margin:0 30px;
+    padding:17px 41px;
+    font-size:30px;
+    
+}
+.success, 
+.warning,
+.error {
+    outline: none;
+    border:none;
+}
+.success{
+    background-color: var(--success);
+}
+.warning{
+    background-color: var(--warning);
+}
+.error{
+    background-color: var(--error);
+}
+.successs{
+    background-color: var(--success-light);
+    border-left: 9px solid var(--success-light);
+}
+.warningg{
+    background-color:var(--warning-light);
+    border-left: 9px solid var(--warning-light);
+}
+.errorr{
+    background-color:var(--error-light);
+    border-left: 9px solid var(--error-light);
+}
+#toasts{
+    position:fixed;
+    top:10px;
+    right:10px;
+}
+.toast{
+    margin-bottom:12px;
+    border-radius:5px;
+    padding: 17px 16px;
+    font-size:24px;
+    overflow: hidden;
+    animation: movee 4s ease forwards;
+}
+.toast .countdown {
+    background-color: black ;
+    position:absolute;
+    bottom:1px;
+    left:0;
+    height:4%;
+    width:100%;
+    /* animation-name: countdown ;
+    animation-duration: 4s;
+    animation-timing-function: linear; 
+    animation-fill-mode: forwards; */
+    animation: countdown 4s ease forwards;
+} 
+
+.toast  i {
+    color:#fff;
+    opacity:0.7;
+}
+ @keyframes countdown {
+    0%{
+        width:100%;
+    }
+    100%{
+        width:0%;
+    }
+}
+@keyframes movee {
+    0%{
+        transform: translateX(100%);
+    }
+    25%{
+        transform: translateX(-10%);
+    }
+    50%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+@keyframes hidden {
+    0%{
+        transform: translateX(-7%);
+    }
+    25%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(410px);
+    }
+}
