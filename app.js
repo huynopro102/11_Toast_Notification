@@ -50,5 +50,27 @@ function creattoast(color){
         toastt.style.animationDuration = '3s'
         toastt.style.animationFillMode = 'forwards'
         toastt.style.animationTimingFunction = 'ease'
+        
+        
+            // khi click sẽ thực hiện việc này
+        switch(color){
+            case'warningg':
+            setTimeout(function(){
+                toastt.previousElementSibling.remove('toastt')
+                toastt.previousElementSibling.remove('warningg')
+            },1500)
+          
+            case'errorr':
+            setTimeout(function(){
+                toastt.previousElementSibling.remove('toastt')
+                toastt.previousElementSibling.remove('warningg')
+            },1500)
+    
+            case'successs':
+            setTimeout(function(){
+                toastt.previousElementSibling.remove('toastt')
+                toastt.previousElementSibling.remove('warningg')
+            },1500)
+        }
     },3000)
 }
