@@ -35,6 +35,7 @@ function creattoast(color){
             
         break;
     }
+    // them element div
     var toastt = document.createElement('div')
     console.log(toastss)
     toastt.classList.add('toast')
@@ -46,13 +47,14 @@ function creattoast(color){
         `
     toastss.appendChild(toastt)
     setTimeout(function(){
+        // them css vao toastt
         toastt.style.animationName = 'hidden'
         toastt.style.animationDuration = '3s'
         toastt.style.animationFillMode = 'forwards'
         toastt.style.animationTimingFunction = 'ease'
         
         
-            // khi click sẽ thực hiện việc này
+            // xoa 2 class toastt , color
         switch(color){
             case'warningg':
             setTimeout(function(){
